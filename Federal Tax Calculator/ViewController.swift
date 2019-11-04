@@ -9,15 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var nameInput: UITextField!
+    @IBOutlet weak var grossIncomeInput: UITextField!
+    @IBOutlet weak var yourAmount: UILabel!
+    @IBOutlet weak var calculateAmount: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
    
-        switch grossIncome{
-        case 0...50000
-        case 50001...100000
-        default:
+
     }
 
 
