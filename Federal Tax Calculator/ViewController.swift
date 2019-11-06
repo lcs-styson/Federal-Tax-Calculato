@@ -17,8 +17,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-   
-
+  
+       
+        guard let grossIncomeAsString = grossIncomeInput.text else {
+ 
+        switch grossIncome {
+        
+        case 0...50000:
+            yourAmount.text = grossIncome * 0.15
+            
+        case 50001...100000:
+            yourAmount.text = grossIncome * 0.205
+            
+        default:
+            yourAmount.text = grossIncome * 0.26
     }
 
 
