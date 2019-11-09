@@ -65,6 +65,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateTaxes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYK-yM-xwM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your gross annual income?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRb-w3-kqf">
                                 <rect key="frame" x="35" y="353" width="344" height="28"/>
@@ -73,8 +76,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHU-9i-GXX">
-                                <rect key="frame" x="184" y="771" width="69" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHU-9i-GXX">
+                                <rect key="frame" x="125" y="759" width="165" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
@@ -86,9 +89,10 @@
                     </view>
                     <connections>
                         <outlet property="calculateAmount" destination="3CD-zg-wyb" id="4Zl-jp-CUv"/>
-                        <outlet property="grossIncomeInput" destination="OTf-T7-Yut" id="J95-WF-w2W"/>
+                        <outlet property="effectiveTaxRateOutput" destination="BHU-9i-GXX" id="mtf-hR-UNb"/>
+                        <outlet property="incomeInput" destination="OTf-T7-Yut" id="9hl-nG-vsm"/>
                         <outlet property="nameInput" destination="3c4-RT-dl9" id="9io-R9-IVC"/>
-                        <outlet property="yourAmount" destination="tdd-UB-Bjs" id="W7t-mg-jzz"/>
+                        <outlet property="taxesOwingOutput" destination="tdd-UB-Bjs" id="aco-t7-sgp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
