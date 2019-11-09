@@ -34,6 +34,11 @@ class ViewController: UIViewController {
             return
         }
         
+        guard let nameAsString = nameInput.text else {
+            taxesOwingOutput.text = "Please enter a name."
+            return
+        }
+        
         // Get the income as a Double
         guard let incomeAsDouble = Double(incomeAsString) else {
             return
@@ -44,10 +49,21 @@ class ViewController: UIViewController {
             let taxesOwing = incomeAsDouble * 0.15
             taxesOwingOutput.text = "You owe " + String(taxesOwing)
             
-//        case 47631...95295:
+        case 47631...95259:
+            let taxesOwing = (47629 - incomeAsDouble) * 0.205 + 47630 * 0.15
+            taxesOwingOutput.text = "You owe " + String(taxesOwing)
+            
+        case 95260...147667:
+            let taxesOwing = (95259 - incomeAsDouble) * 0.26 + 47629 * 0.205 + 47630 * 0.15
+            taxesOwingOutput.text = "You owe " + String(taxesOwing)
+            
+        case 147668...210371:
+            let taxesOwing = (147667 - incomeAsDouble) * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
+            taxesOwingOutput.text = "You owe " + String(taxesOwing)
             
         default:
-            taxesOwingOutput.text = "Need to add code here"
+            let taxesOwing = (210371 - incomeAsDouble) * 0.33 + 62704 * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
+            taxesOwingOutput.text = "You owe " + String(taxesOwing)
         }
         
     }
