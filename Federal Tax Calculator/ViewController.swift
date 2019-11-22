@@ -50,19 +50,19 @@ class ViewController: UIViewController {
             taxesOwingOutput.text = "You owe " + String(taxesOwing)
             
         case 47631...95259:
-            let taxesOwing = (47629 - incomeAsDouble) * 0.205 + 47630 * 0.15
+            let taxesOwing = (incomeAsDouble - 47629) * 0.205 + 47630 * 0.15
             taxesOwingOutput.text = "You owe " + String(taxesOwing)
             
         case 95260...147667:
-            let taxesOwing = (95259 - incomeAsDouble) * 0.26 + 47629 * 0.205 + 47630 * 0.15
+            let taxesOwing = (incomeAsDouble - 95259) * 0.26 + 47629 * 0.205 + 47630 * 0.15
             taxesOwingOutput.text = "You owe " + String(taxesOwing)
             
         case 147668...210371:
-            let taxesOwing = (147667 - incomeAsDouble) * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
+            let taxesOwing = (incomeAsDouble - 147667) * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
             taxesOwingOutput.text = "You owe " + String(taxesOwing)
             
         default:
-            let taxesOwing = (210371 - incomeAsDouble) * 0.33 + 62704 * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
+            let taxesOwing = (incomeAsDouble - 210371) * 0.33 + 62704 * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
             taxesOwingOutput.text = "You owe " + String(taxesOwing)
         }
         
