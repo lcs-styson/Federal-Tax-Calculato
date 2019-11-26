@@ -47,23 +47,39 @@ class ViewController: UIViewController {
         switch incomeAsDouble {
         case 0...47630:
             let taxesOwing = incomeAsDouble * 0.15
-            taxesOwingOutput.text = "You owe " + String(taxesOwing)
+            taxesOwingOutput.text = nameAsString + ", you owe $" + String(taxesOwing)
+            let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
+            let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
+            effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
             
         case 47631...95259:
             let taxesOwing = (incomeAsDouble - 47629) * 0.205 + 47630 * 0.15
-            taxesOwingOutput.text = "You owe " + String(taxesOwing)
+            taxesOwingOutput.text = nameAsString + ", you owe $" + String(taxesOwing)
+            let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
+            let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
+            effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
             
         case 95260...147667:
             let taxesOwing = (incomeAsDouble - 95259) * 0.26 + 47629 * 0.205 + 47630 * 0.15
-            taxesOwingOutput.text = "You owe " + String(taxesOwing)
+            taxesOwingOutput.text = nameAsString + ", you owe $" + String(taxesOwing)
+            let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
+            let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
+            effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
             
         case 147668...210371:
             let taxesOwing = (incomeAsDouble - 147667) * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
-            taxesOwingOutput.text = "You owe " + String(taxesOwing)
+            taxesOwingOutput.text = nameAsString + ", you owe $" + String(taxesOwing)
+            let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
+            let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
+            effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
             
         default:
             let taxesOwing = (incomeAsDouble - 210371) * 0.33 + 62704 * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
-            taxesOwingOutput.text = "You owe " + String(taxesOwing)
+            taxesOwingOutput.text = nameAsString + " you owe $" + String(taxesOwing)
+            let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
+            let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
+            effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
+            
         }
         
     }
