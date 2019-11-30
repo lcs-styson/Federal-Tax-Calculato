@@ -51,6 +51,7 @@ class ViewController: UIViewController {
             let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
             let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
             effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
+            let taxesOwingAsString = String(format: "$.01f", taxesOwing)
             
         case 47631...95259:
             let taxesOwing = (incomeAsDouble - 47629) * 0.205 + 47630 * 0.15
@@ -58,6 +59,7 @@ class ViewController: UIViewController {
             let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
             let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
             effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
+            let taxesOwingAsString = String(format: "$.01f", taxesOwing)
             
         case 95260...147667:
             let taxesOwing = (incomeAsDouble - 95259) * 0.26 + 47629 * 0.205 + 47630 * 0.15
@@ -65,6 +67,7 @@ class ViewController: UIViewController {
             let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
             let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
             effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
+            let taxesOwingAsString = String(format: "$.01f", taxesOwing)
             
         case 147668...210371:
             let taxesOwing = (incomeAsDouble - 147667) * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
@@ -72,6 +75,7 @@ class ViewController: UIViewController {
             let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
             let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
             effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
+            let taxesOwingAsString = String(format: "$.01f", taxesOwing)
             
         default:
             let taxesOwing = (incomeAsDouble - 210371) * 0.33 + 62704 * 0.29 + 52408 * 0.26 + 47629 * 0.205 + 47630 * 0.15
@@ -79,6 +83,7 @@ class ViewController: UIViewController {
             let effectiveTaxRate = taxesOwing / incomeAsDouble * 100
             let effectiveTaxRateAsString = String(format: "%.1f", effectiveTaxRate)
             effectiveTaxRateOutput.text = "Effective tax rate is " + effectiveTaxRateAsString + "%"
+            let taxesOwingAsString = String(format: "$.01f", taxesOwing)
             
         }
         
